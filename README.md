@@ -56,8 +56,7 @@ and batch actions
         "set_payed",
         order,
         current_active_admin_user,
-        { "order" => true } # Dirty detector go through order object and
-looking for changes
+        { "order" => true } # Dirty detector go through order object and looking for changes
       )
 
       # Save!
