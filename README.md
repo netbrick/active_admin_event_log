@@ -1,4 +1,4 @@
-# Active Admin Event logger for Active Admin 0.6.0 (maybe 0.6.1)
+# Active Admin Event log for AA 0.6.0
 
 ## Info
 Active Admin event log
