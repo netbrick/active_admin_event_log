@@ -42,3 +42,25 @@ Active Admin event log
 
 5. Add event log to actions! I didn't find yet automatic way for log actions
 and batch actions
+
+  ```ruby
+    member_action :set_payed do
+      # Find order to pay
+      order = Order.find(params[:id])
+
+      # Set payed
+      order.set_payed
+
+      # Create log
+      ActiveAdminEventLog.create_event_record(
+        "set_payed",
+        order,
+        current_active_admin_user,
+        { "order" => true } # Dirty detector go through order object and
+looking for changes
+      )
+
+      # Save!
+      order.save
+    end
+  ```
