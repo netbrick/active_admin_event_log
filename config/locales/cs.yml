@@ -1,0 +1,15 @@
+cs:
+  activerecord:
+    models:
+      active_admin_event_log/active_admin_event:
+        one: "Log události"
+        zero: "Log události"
+        other: "Log událostí"
+    attributes:
+      active_admin_event_log/active_admin_event:
+        created_at: "Vytvořeno"
+        resource: "Objekt"
+        resource_type: "Typ objektu"
+        author: "Zdroj"
+        params: "Změny"
+        action: "Akce"

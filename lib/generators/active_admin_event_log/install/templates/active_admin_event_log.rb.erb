@@ -1,0 +1,28 @@
+ActiveAdmin.register ActiveAdminEventLog::ActiveAdminEvent do
+
+  # Filters
+  filter :action, :as => :select, :collection => Proc.new { ActiveAdminEventLog::ActiveAdminEvent.select('DISTINCT action').map { |m| [ m.action, m.action ] } }
+  filter :created_at
+  filter :resource_type
+
+  # Menu
+  index do
+    column :created_at
+    column :author
+    column :action
+    column :resource_type
+    column :resource
+    default_actions
+  end
+
+  show do
+    attributes_table do
+      row :created_at
+      row :action
+      row :author
+      row :resource
+      row :resource_type
+      row :params
+    end
+  end
+end

@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    models:
+      active_admin_event_log/active_admin_event:
+        one: "Event log"
+        zero: "Event log"
+        other: "Events log"
+    attributes:
+      active_admin_event_log/active_admin_event:
+        created_at: "Created at"
+        resource: "Resource"
+        resource_type: "Resource type"
+        author: "Author"
+        params: "Changes"
+        action: "Action"
