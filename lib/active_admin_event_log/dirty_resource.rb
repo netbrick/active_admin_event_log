@@ -61,7 +61,7 @@ module ActiveAdminEventLog
           end
 
           # Delete if empty!
-          changed_data.delete(asc.name) if change_data[asc.name].size == 0
+          changed_data.delete(asc.name) if changed_data[asc.name].size == 0
         end
 
         # Return
