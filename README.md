@@ -8,7 +8,7 @@ Active Admin event log
 1. Add gem to gemfile
 
   ```ruby
-  gem 'active_admin_event_log', :git => "https://github.com:netbrick/active_admin_event_log.git"
+  gem 'active_admin_event_log', :git => "https://github.com/netbrick/active_admin_event_log.git"
   ```
 
 2. Run rails generator for create event log migration and create active_admin template (offcourse you'll be able to modify active admin event log resource after that)
@@ -56,8 +56,7 @@ and batch actions
         "set_payed",
         order,
         current_active_admin_user,
-        { "order" => true } # Dirty detector go through order object and
-looking for changes
+        { "order" => true } # Dirty detector go through order object and looking for changes
       )
 
       # Save!
