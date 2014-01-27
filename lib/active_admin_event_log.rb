@@ -39,7 +39,7 @@ module ActiveAdminEventLog
       changed_data = {
         type: resource.class.name,
         id: resource.try(:id),
-        exception: e.message # Reason why can serialize!
+        exception: e.message # Reason why can't serialize!
       }
       # Save params
       changed_data[:params] = params if params
