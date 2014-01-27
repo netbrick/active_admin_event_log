@@ -26,6 +26,29 @@ module ActiveAdminEventLog
       :params => changed_data
     )
   end
+
+  def self.prepare_object_hash_dump(resource, params = nil)
+    begin
+      changed_data = {
+        type: resource.class.name,
+        id:   resource.try(:id),
+        data: ActiveSupport::JSON.decode(resource.to_json)
+      }
+      changed_data = changed_data.to_hash
+    rescue => e
+      changed_data = {
+        type: resource.class.name,
+        id: resource.try(:id),
+        exception: e.message # Reason why can serialize!
+      }
+      # Save params
+      changed_data[:params] = params if params
+
+      # Save data
+      changed_data = changed_data.to_hash
+    end
+    changed_data
+  end
 end
 
 # Event - only found option yet ;-(
