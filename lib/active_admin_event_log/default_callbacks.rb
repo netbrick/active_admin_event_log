@@ -29,7 +29,7 @@ module ActiveAdminEventLog
 
           @config.controller.send("after_create") do |resource|
               # Nohting to do when resource is invalid?!
-              unless resource.invalid?
+              if resource.errors.empty?
                 # Get changed data
                 changed_data = ActiveAdminEventLog.prepare_object_hash_dump resource, params
 
