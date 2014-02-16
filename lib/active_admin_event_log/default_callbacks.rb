@@ -44,8 +44,9 @@ module ActiveAdminEventLog
           end
         end
 
-        def initialize(config)
-          @config = config
+        def initialize(config, resource_class)
+          @resource = resource_class
+          super(config)
           set_log_callbacks
         end
       end

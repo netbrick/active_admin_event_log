@@ -8,7 +8,7 @@ Active Admin event log
 1. Add gem to gemfile
 
   ```ruby
-  gem 'active_admin_event_log', :git => "https://github.com/netbrick/active_admin_event_log.git"
+  gem 'active_admin_event_log', github: 'netbrick/active_admin_event_log', branch: 'rails4'
   ```
 
 2. Run rails generator for create event log migration and create active_admin template (offcourse you'll be able to modify active admin event log resource after that)

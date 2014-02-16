@@ -4,9 +4,6 @@ module ActiveAdminEventLog
     belongs_to :resource, :polymorphic => true
     belongs_to :author,   :polymorphic => true
 
-    # Attributes
-    attr_accessible :resource, :resource_id, :resource_type, :action, :params, :author
-
     # Serialize params
     serialize :params
 
