@@ -1,4 +1,4 @@
-# Active Admin Event log for AA 0.6.0
+# Active Admin Event log for Rails4 + AA 1.0.0pre
 
 ## Info
 Active Admin event log
